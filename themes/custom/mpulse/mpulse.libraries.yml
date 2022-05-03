@@ -1,0 +1,12 @@
+global-styling:
+  version: VERSION
+  css:
+    base:
+      css/base/elements.css: {}
+    layout:
+      css/layout.css: {}
+    theme:
+      css/bootstrap.min.css: {}
+      css/custom.css: {}
+  js:
+    js/bootstrap.min.js: {}  

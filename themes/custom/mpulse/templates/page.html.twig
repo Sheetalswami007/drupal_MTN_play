@@ -1,0 +1,1107 @@
+{#
+/**
+ * @file
+ * Bartik's theme implementation to display a single page.
+ *
+ * The doctype, html, head and body tags are not in this template. Instead they
+ * can be found in the html.html.twig template normally located in the
+ * core/modules/system directory.
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - is_admin: A flag indicating if the user has permission to access
+ *   administration pages.
+ *
+ * Site identity:
+ * - front_page: The URL of the front page. Use this instead of base_path when
+ *   linking to the front page. This includes the language domain or prefix.
+ *
+ * Page content (in order of occurrence in the default page.html.twig):
+ * - node: Fully loaded node, if there is an automatically-loaded node
+ *   associated with the page and the node ID is the second argument in the
+ *   page's path (e.g. node/12345 and node/12345/revisions, but not
+ *   comment/reply/12345).
+ *
+ * Regions:
+ * - page.header: Items for the header region.
+ * - page.highlighted: Items for the highlighted region.
+ * - page.primary_menu: Items for the primary menu region.
+ * - page.secondary_menu: Items for the secondary menu region.
+ * - page.featured_top: Items for the featured top region.
+ * - page.content: The main content of the current page.
+ * - page.sidebar_first: Items for the first sidebar.
+ * - page.sidebar_second: Items for the second sidebar.
+ * - page.featured_bottom_first: Items for the first featured bottom region.
+ * - page.featured_bottom_second: Items for the second featured bottom region.
+ * - page.featured_bottom_third: Items for the third featured bottom region.
+ * - page.footer_first: Items for the first footer column.
+ * - page.footer_second: Items for the second footer column.
+ * - page.footer_third: Items for the third footer column.
+ * - page.footer_fourth: Items for the fourth footer column.
+ * - page.footer_fifth: Items for the fifth footer column.
+ * - page.breadcrumb: Items for the breadcrumb region.
+ *
+ * @see template_preprocess_page()
+ * @see html.html.twig
+ */
+#}
+ <div class="wrapper">
+    <div class="header-top">
+      <div class="container ">
+        <div class="row">
+          <div class="col-sm-6 col-md-6"></div>
+          <div class="col-sm-6 col-md-6">
+            <div class="mtn-why">
+              <ul>
+                <li><a href="">Why MTN?</a></li>
+                <li><a href="">Help</a></li>
+                <li><a href="">Foundation</a></li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Investors</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="nav-wrapper">
+      <div class="container pb-2">
+        <nav class="navbar navbar-expand-lg  bg-white navbar-white">
+
+          <a class="navbar-brand" href="#"><img src="{{ base_path ~ directory }}/images/logo.png" border="0" alt="MTN logo"></a>
+          <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " href="#">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Play</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Business</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Offers</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control mr-2 nav-input" type="search" placeholder="Search" aria-label="Search">
+              <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link " href="#"><img class="desktop-hd" src="{{ base_path ~ directory }}/images/cart.png" border="0" alt="Cart">
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#"><img class="desktop-hd" src="{{ base_path ~ directory }}/images/icons-my-account.png" border="0"
+                      alt="Cart">
+                  </a>
+                </li>
+              </ul>
+            </form>
+          </div>
+
+        </nav>
+      </div>
+    </div>
+
+
+
+
+    <div class="product">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-12">
+
+
+            <!-- Carousel -->
+            <div id="demo" class="carousel slide " data-bs-ride="carousel">
+              <!-- The slideshow/carousel -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row">
+                    <div class="col-12  col-md-4 col-lg-5 ">
+                      <div class="mtn-box">
+                        <h1 class="mtn-heading "> MTN<br>Hynetflex</h1>
+                        <h3 class="mtn-free">Get 120GB free</h3>
+                        <h3 class="mtn-free"> ₦25,000</h3>
+                        <button class="btn buy-now mt-3">Buy now</button>
+                      </div>
+                    </div>
+
+                    <div class="col-12  col-md-8  col-lg-7">
+                      <div>
+                        <img class="relative productimg" src="{{ base_path ~ directory }}/images/router.png" alt="">
+                      </div>
+                      <div class="small-box-left absolute">
+                        <div class="row">
+                          <div class="col-sm-3 col-md-3 col-3 align"><img src="{{ base_path ~ directory }}/images/Hy-netFlex.png" alt=""></div>
+                          <div class="col-sm-9 col-md-9 col-9 align">
+                            <p class="board-font">MTN's HyNetflex <b>4G</b> <br>+ boardband </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="small-box-right absolute">
+                        <div class="row p-2">
+                          <div class="col-12">
+                            <div class="text-center">
+                              <img src="{{ base_path ~ directory }}/images/wifi.png" alt="">
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <h5 class="amaz">Amazing Speed</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-12  col-md-4 col-lg-5 ">
+                      <div class="mtn-box">
+                        <h1 class="mtn-heading">Strategic partnership</h1>
+                        <h3 class="mtn-free"> Drives economic </h3>
+                        <h3 class="mtn-free"> growth</h3>
+                        <button class="btn buy-now mt-3">Buy now</button>
+                      </div>
+                    </div>
+                   
+
+                    <div class="col-12  col-md-8  col-lg-7">
+                      <div>
+                        <img class="relative productimg" src="{{ base_path ~ directory }}/images/women-coffe (3).png" alt="">
+                      </div>
+                      <div class="small-box-left absolute">
+                        <div class="row">
+                          <div class="col-sm-3 col-md-3 col-3 align"><img src="{{ base_path ~ directory }}/images/grow.png"  alt=""></div>
+                          <div class="col-sm-9 col-md-9 col-9 align">
+                            <p class="board-font">Opportunities +<br>Develop + Scale</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="small-box-right absolute">
+                        <div class="row p-2">
+                          <div class="col-12">
+                            <div class="text-center">
+                              <img src="{{ base_path ~ directory }}/images/thumb's-up (1).png" alt="">
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <p class="data-para">Let's</p>
+                            <h5 class="data-drift text-center" >Collabrate!</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-12  col-md-4 col-lg-5 ">
+                      <div class="mtn-box">
+                        <h1 class="mtn-heading"> Data gifting</h1>
+                        <h1 class="mtn-heading"> was never so <br> easy</h1>
+                        <button class="btn buy-now mt-3">Buy now</button>
+                      </div>
+                    </div>
+
+                    <div class="col-12  col-md-8  col-lg-7">
+                      <div>
+                        <img class="relative productimg" src="{{ base_path ~ directory }}/images/girl-boy.png" alt="">
+                      </div>
+                      <div class="small-box-left absolute">
+                        <div class="row">
+                          <div class="col-sm-3 col-md-3 col-3 align"><img src="{{ base_path ~ directory }}/images/group-36.png" class="data-img" alt=""></div>
+                          <div class="col-sm-9 col-md-9 col-9 align">
+                            <p class="board-font">Sharing you <img src="images/" alt=""> <br> <b>₦1,500</b> buddy </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="small-box-right absolute">
+                        <div class="row p-2">
+                          <div class="col-12">
+                            <div class="text-center">
+                              <img src="{{ base_path ~ directory }}/images/verified.png" alt="">
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <p class="data-para">Got it!</p>
+                            <h5 class="data-drift">Thanks Buddy</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Indicators/dots -->
+              <div class="row button-height">
+                <div class="col-12">
+                  <div class="carousel-indicators">
+                    <!-- <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"> -->
+                    <div data-bs-target="#demo" data-bs-slide-to="0" class="card h-100 pro-card active">
+                      <div class="card-body card-bg">
+                        <div class="row">
+                          <h5 class="m-0 nav-link">MTN Hynetflex</h5>
+                        </div>
+                        <div class="row">
+                          <p class="m-0 nav-link" style="font-size: 15px; color: rgb(131, 125, 125);">Affordability,
+                            Coverage,
+                            Speed</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- </button> -->
+                    <!-- <button type="button" data-bs-target="#demo" data-bs-slide-to="1"> -->
+                    <div type="button" data-bs-target="#demo" data-bs-slide-to="1" class="card pro-card h-100">
+                      <div class="card-body card-bg">
+                        <div class="row">
+                          <h5 class="m-0 nav-link">Business</h5>
+                        </div>
+                        <div class="row">
+                          <p class="m-0 nav-link" style="font-size: 15px; color: rgb(131, 125, 125);">Grow your business
+                            with
+                            our services</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- </button> -->
+                    <!-- <button type="button" data-bs-target="#demo" data-bs-slide-to="2"> -->
+                    <div type="button" data-bs-target="#demo" data-bs-slide-to="2" class="card pro-card h-100">
+                      <div class="card-body card-bg">
+                        <div class="row">
+                          <h5 class="m-0 nav-link" >Data gifting</h5>
+                        </div>
+                        <div class="row">
+                          <p class="m-0 nav-link " style="font-size: 15px; color: rgb(131, 125, 125);">Share a gift of
+                            data,share moments</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- </button> -->
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--experience mtn services-->
+    <div class="experience-bg" >
+      <div class="container" style="background-image: url({{ base_path ~ directory }}/images/group-3.png);">
+        <div class="row">
+          <div class="col align">
+            <h1 class="exp-heading">Experience MTN services</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col align">
+            <p class="exp-font">There's something for everyone</p>
+          </div>
+        </div>
+        <div class="row justify-content-center ">
+          <div class="col-12 col-md-3">
+            <div class="card experience" style="background-color: #D9E1F5;">
+              <div class="card-body ">
+                <div>
+                  <div class="row">
+                    <img src="{{ base_path ~ directory }}/images//pay-bill.png" alt="">
+                  </div><br>
+                  <div class="row ">
+                    <p class="m-0 nav-link p-0">Airtime <br> Recharge</strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3">
+            <div class="card experience" style="background-color: #FFF6E9;">
+              <div class="card-body ">
+                <div>
+                  <div class="row">
+                    <img src="{{ base_path ~ directory }}/images//pay-bill.png" alt="">
+                  </div><br>
+                  <div class="row ">
+                    <p class="m-0 nav-link p-0"><strong>Bill <br> Payment</strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3">
+            <div class="card experience" style="background-color: #FAE5E3;">
+              <div class="card-body  ">
+                <div>
+                  <div class="row">
+                    <img src="{{ base_path ~ directory }}/images/bundles.png" alt="">
+                  </div><br>
+                  <div class="row ">
+                    <p class="m-0 nav-link p-0"><strong>Buy <br> Bundles</strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3">
+            <div class="card experience" style="background-color: #EBFAE3;">
+              <div class="card-body">
+                <div>
+                  <div class="row">
+                    <img src="{{ base_path ~ directory }}/images/share-airtime.png" alt="">
+                  </div><br>
+                  <div class="row ">
+                    <p class="m-0 nav-link p-0"><strong>Share <br> data/airtime</strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="row justify-content-center ">
+          <div class=" col-12 col-md-3 ">
+            <div class="card experience" style="background-color: #F3EFFF;">
+              <div class="card-body   ">
+                <div>
+                  <div class="row">
+                    <img src="{{ base_path ~ directory }}/images/buy-sim.png" alt="">
+                  </div><br>
+                  <div class="row ">
+                    <p class="m-0 nav-link p-0"><strong>4G Sim <br> upgrade</strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3 ">
+            <div class="card experience" style="background-color: #DCF0E5;">
+              <div class="card-body ">
+                <div>
+                  <div class="row">
+                    <img src="{{ base_path ~ directory }}/images/icons-borrow-airtime.png" alt="">
+                  </div><br>
+                  <div class="row ">
+                    <p class="m-0 nav-link p-0"><strong>Borrow <br> data/airtime</strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3 ">
+            <div class="card experience" style="background-color: #CBE5F5;">
+              <div class="card-body">
+                <div>
+                  <div class="row">
+                    <img src="{{ base_path ~ directory }}/images//hy-netflex.png" alt="">
+                  </div><br>
+                  <div class="row ">
+                    <p class="m-0 nav-link p-0"><strong>Buy <br> hynetflex</strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3 ">
+            <div class="card experience" style="background-color: #F4F0E8;">
+              <div class="card-body  ">
+                <div>
+                  <div class="row">
+                    <img src="{{ base_path ~ directory }}/images/3dots-card (1).png" alt="">
+                  </div><br>
+                  <div class="row ">
+                    <p class="m-0 nav-link p-0"><strong>Other <br>services</strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--unique-->
+
+    <div class="unique">
+      <div class="container">
+        <div class="row">
+          <div class="col align">
+            <h1 class="unique-head">Because you're unique</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col align">
+            <p class="uni-para">Our plans fit your lifestyle and give you the best value for
+              money</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="card unique" style="background-color: #29343B;">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 " style="display: flex;">
+                    <div>
+                      <h1 class="unique-card1">Never <br>stop <br> browsing <br>
+                        <h4>myMTN Choice <strong>20GB</strong> with <br> <strong>30GB</strong> of free bundles.</h4>
+                      </h1> <br>
+                      <button class="btn buy-now">Buy now</button>
+                    </div>
+                    <div>
+                      <img src="{{ base_path ~ directory }}/images/yellow-unique.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="card unique" style="background: linear-gradient(119deg, #67401D, #9A7D6A);">
+              <div class="">
+                <div class="row p-0">
+                  <div class="col-sm-12 col-md-12 align">
+                    <div>
+                      <h1 class="unique-card1 "> Get doing with more <br> benefits for less
+                      </h1> <br>
+                      <div class="text-center pb-0">
+                        <img src="{{ base_path ~ directory }}/images/phone-unique.png" class="unique-phone" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="card unique-1" style="background-color: white;">
+              <div class="card-body ">
+                <div class="row p-1">
+                  <div class="col-md-8">
+                    <div>
+                      <h3 style="color: black; " class="unique-card2-head m-0">Device financing
+                      </h3> <br>
+                      <p class="unique-card2-para m-0">Finance the device you want at <br>affordable rates</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div>
+                      <img src="{{ base_path ~ directory }}/images/unique-phone.png" class="unique-img" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="card unique-1" style="background-color: white;">
+              <div class="card-body ">
+                <div class="row p-1">
+                  <div class="col-md-8">
+                    <div>
+                      <h3 style="color: black;" class="unique-card2-head m-0">Data gifting
+                      </h3> <br>
+                      <p class="unique-card2-para  m-0">Transfer data from your active data <br> balance to your friends.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div>
+                      <img src="{{ base_path ~ directory }}/images/tow-mens.png" class="unique-img" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row ">
+          <div class="col-sm-2 col-md-3 align ">
+            <button class="btn btn-outline-primary  unique-btn ">View all,compare & buy </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!--Business-->
+    <div class="business mt-5">
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col align">
+            <h1>All of your business needs</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col ">
+            <p class="business-main-para">Achieve digital transformation for your business services</p>
+          </div>
+        </div>
+        <div class="row">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="width: 100%;">
+            <div class="carousel-inner">
+              <div class="carousel-item py-5 active">
+                <div class="row justify-content-center">
+                  <div class="col-sm-4   business-center">
+                    <div class="">
+                      <h2 class="bus-head">Grow your business </h2>
+                      <p class="bus-para m-0">Help your employees take your enterprise to new heights</p>
+                      <br>
+                      <button class="btn buy-now">Know More</button>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 ">
+                      <img src="{{ base_path ~ directory }}/images/woman-holding-i-pad.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item py-5">
+                <div class="row justify-content-center">
+                  <div class="col-sm-4 business-center">
+                    <div class="">
+                      <h1 class="bus-head">Small & medium enterprises </h1> <br>
+                      <p class="bus-para m-0">Grow your business with the tailor-made services, designed to suit your
+                        goals</p>
+                      <br>
+                      <button class="btn buy-now">Know More</button>
+                    </div>
+                  </div>
+                  <div class="col-sm-4"><img src="{{ base_path ~ directory }}/images/woman-holding-i-pad.png" alt=""></div>
+                </div>
+              </div>
+              <div class="carousel-item py-5">
+                <div class="row justify-content-center">
+                  <div class="col-sm-4 business-center">
+                    <div class="">
+                      <h1 class="bus-head">Partnership </h1> <br>
+                      <p class="bus-para m-0">A partnership focused to always put you first and exceeding you
+                        expectations</p>
+                      <br>
+                      <button class="btn buy-now">Know More</button>
+                    </div>
+                  </div>
+                  <div class="col-sm-4"><img src="{{ base_path ~ directory }}/images/woman-holding-i-pad.png" alt=""></div>
+                </div>
+              </div>
+            </div>
+            <!--indicators-->
+            <div class="carousel-indicators">
+              <div type="button" class="card p-0 border-0 active " data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0">
+                <div class=" card-bg h-100" style="padding: 10px;">
+                  <div class="card-body ">
+                    <div class="row">
+                      <h3 class="m-0 nav-link p-0 "><strong>Corporate</strong></h3>
+                    </div>
+                    <div class="row ">
+                      <p class="m-0 nav-link paragraph p-0">Connect your business with the best innovative solution</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div type="button" class=" card p-0 border-0" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1">
+                <div class=" card-bg h-100" style="padding: 10px;">
+                  <div class="card-body ">
+                    <div class="row">
+                      <h3 class="m-0 nav-link p-0 "><strong>Small & medium enterprises</strong></h3>
+                    </div>
+                    <div class="row ">
+                      <p class="m-0 nav-link p-0 paragraph">Grow your business with the tailor-made services, designed to suit
+                        your goals</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div type="button" class=" card p-0 border-0" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2" >
+                <div class="card-bg h-100" style="padding: 10px;">
+                  <div class="card-body ">
+                    <div class="row">
+                      <h3 class="m-0 nav-link p-0 "><strong>Partnership</strong></h3>
+                    </div>
+                    <div class="row">
+                      <p class="m-0 nav-link paragraph p-0">A partnership focused to always put you first and exceeding you
+                        expectations</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--business end here-->
+
+
+
+
+    <div class="explore mt-5 ">
+      <div class="container">
+        <div class="row">
+          <div class="col align">
+            <h2 class="explore-main-heading">Explore more from MTN</h2>
+            <p class="explore-main-paragraph">Discover more digital possoblities</p>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-sm-6 col-md-6 col-lg-6 mt-5">
+            <div class="card "  style="background-color: rgb(255,246,233);
+            background-image: linear-gradient(180deg, rgb(255,246,233), rgb(254,231,172));
+          ">
+              <div class="card-body">
+                <h2 class="explore-heading">MTN Apps</h2><br>
+                <p class="explore-para"> Welcome to the world of services to <br> suit everyone's needs.</p>
+                <a href="#" class="explore-link">Know more ></a>
+              </div>
+              <div style="float:right">
+                <img class="card-img-bottom" src="{{ base_path ~ directory }}//images/women-phone.png" alt="Card image cap">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-6 mt-5">
+            <div class="card " style="background-color: rgb(234,249,226);
+            background-image: linear-gradient(180deg, rgb(234,249,226), rgb(170,215,190));">
+              <div class="card-body">
+                <h2 class="explore-heading">Digital services</h2><br>
+                <p class="explore-para">Unlocking economic growth through <br> digital solutions for consumers.</p>
+                <a href="#" class="explore-link">Know more ></a>
+              </div>
+              <div style="float:right">
+                <img class="card-img-bottom" src="{{ base_path ~ directory }}/images/man-laptop.png" alt="Card image cap">
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-6 mt-5">
+            <div class="card " style="background-color:   rgb(243,234,200);
+            background-image: linear-gradient(180deg,  rgb(243,234,200) ,   rgb(247, 215, 86));">
+              <div class="card-body">
+                <h2 class="explore-heading">Play & Win</h2><br>
+                <p class="explore-para">Tweet, browse, post and share all<br>the filla it's whatever you like with MTN.</p>
+                <a href="#" class="explore-link">Know more ></a>
+              </div>
+              <div style="float:right">
+                <img class="card-img-bottom" src="{{ base_path ~ directory }}/images/women-phone-1.png" alt="Card image cap">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-6 mt-5">
+            <div class="card " style="background-color: rgb(228,219,241);
+            background-image: linear-gradient(180deg, rgb(228, 219, 241), rgb(231, 178, 243) );">
+              <div class="card-body">
+                <h2 class="explore-heading">Events</h2><br>
+                <p class="explore-para">Stay informed with MTN events Next<br>'22, products, special offers, and more.</p>
+                <a href="#" class="explore-link">Know more ></a>
+              </div>
+              <div style="float:right">
+                <img class="card-img-bottom" src="{{ base_path ~ directory }}/images/black-man-singing.png" alt="Card image cap">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-1 col-md-1 col-lg-1 mt-5"></div>
+
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- help and support -->
+  <div class="container-fluid" style="background-color: black;">
+    <div class="container ">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt-5">
+          <div class="row">
+            <h2 class="text-white">Help and Support</h2>
+            <p class="help-para">Welcome to the MTN help and support. <br>Please pick a category to get started</p>
+            <p class="help-para">Need more help? Visit our help centre</p>
+            <button type="button" class="btn btn-help btn-outline-warning">Help center</button>
+          </div>
+          <div class="row">
+            <img src="{{ base_path ~ directory }}/images/women-laptop.png" class="women-laptop" alt="">
+
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 ">
+          <div class="row row-card1">
+            <div class="help-card1" style="background-color: #FAE5E3;">
+              <div class="img-margin1">
+                <img src="{{ base_path ~ directory }}/images/time-square.png" alt="">
+                <div class="mt-2">
+                  <h3 class="card-title-1">Considering joining?</h3>
+                  <ul class="help-list">
+                    <li>Pay monthly phones</li>
+                    <li> SIM only deals</li>
+                    <li>Data deals</li>
+                    <li> Loyality programs</li>
+                    <li> Family deals</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row row-card1 ">
+            <div class="help-card1" style="background-color: #F4F0E8;">
+              <div class="img-margin1">
+                <img src="{{ base_path ~ directory }}/images/discovery.png" alt="">
+                <div class="mt-2">
+                  <h3 class="card-title-1">Just joined us?</h3>
+                  <ul class="help-list">
+                    <li> Sign up for myMTN</li>
+                    <li>Download my myMTN app</li>
+                    <li>Chat to virtual buddy Zigi</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4" col-lg-4>
+          <div class=" row-card2">
+            <div class="help-card2" style="background-color: #DCF0E5;">
+              <div class="img-margin2">
+                <img src="{{ base_path ~ directory }}/images/shield-done.png" alt="">
+                <div class="mt-2">
+                  <h3 class="card-title-1">Already with us?</h3>
+                  <ul class="help-list">
+                    <li> Help with your advice</li>
+                    <li>Broadband help</li>
+                    <li>Login with myMTN</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--download mymtn app-->
+  <div class="container mt-5">
+    <div class="row   app-store" style="background-color: rgb(0,0,0);">
+      <div class="col-12  col-md-5 mt-2 ">
+        <div class="row p-4">
+          <h4 class="download-heading mx-sm-0 mx-md-3">Download myMTN app!</h4>
+          <div class=" mx-sm-0 mx-md-2">
+            <img src="{{ base_path ~ directory }}/images/red-yellow (1).png" alt="">
+          </div>
+          <div class="col-12 col-md-6 ">
+            <img src="{{ base_path ~ directory }}/images/app-store.png" alt="">
+          </div>
+          <div class="col-12 col-md-6">
+            <img src="{{ base_path ~ directory }}/images/play-store (1).png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3 qr-center d-flex justify-content-around">
+        <img src="{{ base_path ~ directory }}/images/qr-code.png" alt="" class="qr-code">
+      </div>
+      <div class="col-sm-6 col-md-4 d-flex justify-content-around">
+        <img src="{{ base_path ~ directory }}/images/2phone (1).png" alt="" class="phone">
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!--  ================  footer start ================ -->
+
+  <footer class="ft-start">
+
+
+
+    <div class="container">
+      <div class="mtn-get-touch mt-5">
+        <div class="row">
+          <div class="col-md-6 get-text">
+            <h5>Get yourself notified </h5>
+            <p> Get purchase notifications, new arrivals and exclusive offers & deal</p>
+          </div>
+
+
+          <div class="col-md-4  footer-link-block-not mtn-signup">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Sign up for emails</label>
+                <input type="email" class="form-control" id="xyz@gmail.com" aria-describedby="emailHelp"
+                  placeholder="xyz@gmail.com">
+
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+
+
+      <div class="mtn-footer-link">
+        <div class="row mtn-ft-tog">
+          <div class="col-md-2 footer-link-block">
+
+            <h3> Quick links <span> </span> </h3>
+
+            <ul>
+
+              <li> <a href="#">Recharge</a> </li>
+              <li> <a href="#">Share & Borrow</a> </li>
+              <li> <a href="#">Data plans</a> </li>
+              <li> <a href="#">Roaming</a> </li>
+              <li> <a href="#">International calls</a> </li>
+              <li> <a href="#">Business plans </a> </li>
+            </ul>
+
+          </div>
+          <div class="col-md-2 footer-link-block">
+
+            <h3> Entertainment <span> </span> </h3>
+
+            <ul>
+              <li> <a href="#">Play</a> </li>
+              <li> <a href="#">MoMo</a> </li>
+              <li> <a href="#">Events</a> </li>
+
+            </ul>
+
+          </div>
+
+          <div class="col-md-2 footer-link-block">
+            <h3> Account services <span> </span> </h3>
+            <ul>
+
+              <li> <a href="#">Pay Bill</a> </li>
+              <li> <a href="#">Switch to MTN</a> </li>
+              <li> <a href="#">NIN Update</a> </li>
+              <li> <a href="#">SIM Services</a> </li>
+            </ul>
+
+
+          </div>
+
+          <div class="col-md-2 footer-link-block">
+            <h3> Help & Support <span> </span> </h3>
+            <ul>
+
+              <li> <a href="#">Contact us</a> </li>
+              <li> <a href="#">FAQ's</a> </li>
+              <li> <a href="#">Track your order</a> </li>
+              <li> <a href="#">Feedback</a> </li>
+              <li> <a href="#">Ask our community</a> </li>
+
+            </ul>
+
+          </div>
+
+
+          <div class="col-md-2 footer-link-block">
+            <h3> MTN Nigeria <span> </span> </h3>
+            <ul>
+
+              <li> <a href="#">Who we are</a> </li>
+              <li> <a href="#">MTN Business</a> </li>
+              <li> <a href="#">For Investors</a> </li>
+              <li> <a href="#">MTN Foundations</a> </li>
+              <li> <a href="#">Ask our community</a> </li>
+
+            </ul>
+          </div>
+
+          <div class="col-md-2 footer-link-block">
+            <h3> Feedback <span> </span> </h3>
+            <p>Your Comments help <br>us improve our <br> website and services</p>
+            <button type="submit" class="btn btn-mtn-primary-ye">Leave feedback</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="mtn-nigeria-social">
+
+        <div class="row">
+          <div class="col-md-6 mtn-copy-link">
+            <div class="mtn-ft-logo">
+              <div class="ft-logo-icon"> <img src="{{ base_path ~ directory }}/images/mtn-logo.png" border="0" alt="MTN logo"> </div>
+              <div class="ft-logo-text"> © 2021 MTN Nigeria Communications PLC, All rights reserved. Privacy Policy &
+                Data Protection </div>
+            </div>
+
+            <div class="link-are">
+              <ul>
+                <li> <a href="#"> Privacy policy & Data protection </a> </li>
+                <li> <a href="#">Accessibility </a> </li>
+                <li> <a href="#">Sitemap </a></li>
+
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-6 mtn-nigeria">
+            <div class="mtn-social-link">
+              <ul>
+                <li> <a href="#"> <img src="{{ base_path ~ directory }}/images/mtn-facebook.png" border="0" alt="Facebook" title="Facebook"> </a>
+                </li>
+                <li> <a href="#"> <img src="{{ base_path ~ directory }}/images/mtn-youtube.png" border="0" alt="Youtube" title="Youtube"> </a>
+                </li>
+                <li> <a href="#"> <img src="{{ base_path ~ directory }}/images/mtn-twitter.png" border="0" alt="twitter" title="Twitter"> </a>
+                </li>
+                <li> <a href="#"> <img src="{{ base_path ~ directory }}/images/mtn-instagram.png" border="0" alt="instagram" title="Facebook">
+                  </a> </li>
+                <li> <a href="#"> <img src="{{ base_path ~ directory }}/images/mtn-linkdin.png" border="0" alt="Linkedin " title="Linkedin"> </a>
+                </li>
+              </ul>
+
+            </div>
+
+            <div class="mtn-select-lang-block">
+              <div class="country">
+                <div id="country" class="select"><span class="flag-img"><img src="{{ base_path ~ directory }}/images/nigeria-flag.png" border="0">
+                  </span>Nigeria</div>
+                <div id="country-drop" class="dropdown">
+                  <ul>
+
+                    <li> Afghanistan </li>
+                    <li>Benin</li>
+                    <li> Botswana </li>
+
+
+                    <li><span class="flag-img"><img src="{{ base_path ~ directory }}/images/nigeria-flag.png" border="0"> </span>Nigeria </li>
+                    <li>Guinea Bissau</li>
+                    <li> Cameroon </li>
+
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer-btm"> Exclusive savings when you buy SIM only or Socialmedia bundles. <a href="#">Login to get
+        your discount</a> </div>
+
+
+    <div class="chat-wp collapse" id="chat-box-pop">
+      <div class="chart-block" data-toggle="collapse" data-target="#chat-box-pop"> <img src="{{ base_path ~ directory }}/images/chart-icon.png"
+          border="0" alt=""> </div>
+      <div class="chart-close" data-toggle="collapse" data-target="#chat-box-pop"> <img src="{{ base_path ~ directory }}/images/chat-close.png"
+          border="0" alt=""> </div>
+
+      <div class="page-content page-container popup-chart" id="page-content">
+
+        <div class="row-not container-not d-flex justify-content-center">
+          <div class="chart-box-wd">
+            <div class="card card-bordered">
+              <div class="card-header">
+                <h4 class="card-title">
+                  <span class="top-chart-img"> <img src="{{ base_path ~ directory }}/images/chart-zigi.png" border="0"> </span>
+                  <strong>Ziggy</strong>
+                </h4> <a class="btn btn-xs btn-secondary btn-minus" href="javascript:void(0)" data-toggle="collapse"
+                  data-target="#chat-box-pop"></a>
+              </div>
+              <div class="ps-container ps-theme-default ps-active-y" id="chat-content"
+                style="overflow-y: scroll !important; height:400px !important;">
+
+                <div class="media media-meta-day">Today <time datetime="2021">4:07PM</time></div>
+                <div class="media media-chat">
+                  <div class="zigi-proson"> <img src="{{ base_path ~ directory }}/images/zigi-cion3.png" border="0"> </div>
+
+                  <div class="media-body">
+                    <div class="name-1"> Ziggy</div>
+                    <p>Hi there! Howr can I help you out there?</p>
+                    <p>We will go on sunday? </p>
+                    <p class="meta"><time datetime="2018">00:07</time></p>
+                  </div>
+                </div>
+                <div class="media media-chat media-chat-reverse">
+                  <div class="media-body">
+                    <p>Raise new complaint</p>
+
+                    <p>Check airtime blance</p>
+                    <p>Check data blance</p>
+                    <p>Recent transaction</p>
+
+                    <p class="meta"><time datetime="2018">00:06</time></p>
+                  </div>
+                </div>
+
+
+
+
+
+
+                <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+                  <div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                </div>
+                <div class="ps-scrollbar-y-rail" style="top: 0px; height: 0px; right: 2px;">
+                  <div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 2px;"></div>
+                </div>
+              </div>
+              <div class="publisher bt-1 border-light">
+                <div class="text-type"> Other? Type here </div>
+                <a class="publisher-btn" href="#" data-abc="true"> <img src="{{ base_path ~ directory }}/images/chart-attach.png" border="0"> </a>
+                <a class="publisher-btn text-info" href="#" data-abc="true"> <img src="{{ base_path ~ directory }}/images/chart-photo.png"
+                    border="0"> </a>
+                <input class="publisher-input" type="text" placeholder="Start typing here">
+                <a class="publisher-btn sent-icon" href="#" data-abc="true"> <img src="{{ base_path ~ directory }}/images/chart-sent.png"
+                    border="0"> </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="bottom mt-5"> Exclusive savings when you buy SIM only or Socialmedia bundles. <a href="#">Login to get your discount</a></div>
+
+  </footer>
+  <!--  ================  footer end ================ -->
+
+
